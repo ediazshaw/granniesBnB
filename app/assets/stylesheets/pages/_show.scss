@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.show-body {
+  background-color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  color: #D25D59;
+  margin-left: 170px;
+  margin-right: 170px;
+}
+span {
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 59px;
+}
+.profile-img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  margin: auto;
+  border-radius: 8px;
+}
+h3 {
+  font-size: 35px;
+}
+.general-info {
+  display: flex;
+  justify-content: space-between;
+}
+.initial-phrase {
+  padding-top: 80px;
+}
+.description {
+  padding-top: 15px;
+}
+.abilities {
+  padding-top: 15px;
+}
+// Frame configuration
+.frame-info {
+  border: #D25D59 solid 3px;
+  border-radius: 8px;
+  margin-top: 80px;
+  padding: 15px;
+  margin-bottom: 50px;
+  width: 400px;
+}
+.inside-frame {
+  border-radius: 8px;
+  margin: auto;
+}
+.book-button {
+  background-color: #D25D59;
+  padding: 6px 17px;
+  width: fit-content;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-bottom: 28px;
+  text-align: center;
+  width: 100%;
+  a {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+}
+.first-row-frame {
+  display: flex;
+  justify-content: space-between;
+}
+.end-div {
+  padding-right: 205px;
+  padding-bottom: 2px;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+.start-div {
+  padding: 10px;
+}
+.second-row-frame {
+  padding: 10px;
+}
+// Finished frame
+.math {
+  border-top: #D25D59 solid 1px;
+  margin-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  span {
+    font-size: 18px;
+  }
+}
+.font-bigger {
+  font-size: 20px;
+}
+p {
+  font-size: 18px;
+}
