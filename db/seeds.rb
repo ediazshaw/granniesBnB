@@ -8,12 +8,12 @@
 
 User.destroy_all
 puts "creating user"
-User.create!(email:'user1@gmail.com', password: '123456')
+user = User.create!(email:'user1@gmail.com', password: '123456')
 puts "done"
 
 Granny.destroy_all
 
 puts "creating maria"
-Granny.create!(name: "Maria", age: 80, city:'Madrid', user_id: 1)
+Granny.create!(name: "Maria", age: 80, city:'Madrid', user_id: user.id)
 
 puts "done"
