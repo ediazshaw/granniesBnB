@@ -15,8 +15,10 @@
             <p><%= granny.price %>€</p>
         </div>
         <div class="items info">
+          <%= link_to granny_path(granny) do %>
           <i class="fa-solid fa-cookie-bite"></i>
           <span>MORE INFORMATION</span>
+          <% end %>
         </div>
       </div>
     </div>
