@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  padding: 0;
+  font-family: 'Oleo Script', cursive;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 41px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +19,7 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+.navbar-nav .nav-link {
+  font-size: 20px;
 }
