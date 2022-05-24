@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+
+.banner{
+  background-image: url("flower.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 450px;
+  opacity: 0.15;
+}
+
+.banner-img img{
+  position: absolute;
+  width: 344px;
+  height: 366px;
+  left: 815px;
+  top: 121px;
+}
+
+.title-banner{
+  position: absolute;
+  left: 100px;
+  top: 188px;
+  left: 100px;
+  top: 198px;
+  font-family: 'Oleo Script';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 173px;
+  color: #212529;
+}
+
+.subtitle-banner{
+  position: absolute;
+  width: 536px;
+  height: 97px;
+  left: 150px;
+  top: 338px;
+  font-family: 'Oleo Script';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 69px;
+  color: #212529;
+}
+
+.btn{
+  position: absolute;
+  left: 247px;
+  top: 428px;
+  font-family: 'Oleo Script';
+  font-size: 24px;
+  padding: 6px 12px;
+}
+
+.btn-flat {
+  color: white;
+  border-radius: 4px;
+  background: #D25D59;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #C4A5A0;
+  color: white;
+}
