@@ -6,14 +6,9 @@
   <div class="subtitle-banner">
     Everybody needs a Granny
   </div>
-    <a class="btn btn-flat" href="#">Find Yours</a>
+    <%= link_to "Find Yours", grannies_path , class: "btn btn-flat" %>
   <div class="banner-img">
   <%= image_tag "logo_granny.png" %>
   </div>
 <h1>Pages#home</h1>
-<% if user_signed_in? %>
-  <%= current_user.email %>
-<% else %>
-  <p>Please Sign In</p>
-<% end %>
-<%# conflito %>
+
