@@ -1,8 +1,9 @@
 <h1 class="grannies-title text-center">Grannies in your area:</h1>
 <div class="container">
+
   <div class="cards">
   <% @grannies.each do |granny| %>
-  <div class="card">
+  <div class="card" style='background-image: url("<%= cl_image_path granny.photo.key %>")'>
     <div class="overlay">
       <div class = "items">
         <div class = "items head">
