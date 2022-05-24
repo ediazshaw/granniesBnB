@@ -5,15 +5,38 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
 
 User.destroy_all
-puts "creating user"
-user = User.create!(email:'user1@gmail.com', password: '123456')
+puts 'Creating 10 fake users...'
+
+10.times do
+  user = User.new(
+    email: Faker::Internet.email,
+    password: '123456'
+  )
+  user.save!
+  puts user.email
+end
 puts "done"
 
 Granny.destroy_all
 
-puts "creating maria"
-Granny.create!(name: "Maria", age: 80, city:'Madrid', user_id: user.id)
+cities = ["Madrid", "Lisboa", "Barcelona", "London", "Hamburg", "Bogota"]
+puts 'Creating 20 fake grannies per city...'
 
+cities.each do |city|
+  4.times do
+    granny = Granny.new(
+      name: Faker::Name.name,
+      age: rand(60..80),
+      city: city,
+      user: User.all.sample,
+      price: rand(80..300),
+      description: Faker::Hobby.activity
+    )
+    granny.save!
+    puts granny.name
+  end
+end
 puts "done"
