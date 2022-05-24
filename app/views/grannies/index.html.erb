@@ -1,5 +1,25 @@
-<h1>this is the index page</h1>
-<% @grannies.each do |granny| %>
-  <h2><%= link_to granny.name, granny_path(granny) %></h2>
-  <p><%= granny.city %></p>
-<% end %>
+<h1 class="grannies-title text-center">Grannies in your area:</h1>
+<div class="container">
+  <div class="cards">
+  <% @grannies.each do |granny| %>
+  <div class="card">
+    <div class="overlay">
+      <div class = "items">
+        <div class = "items head">
+            <p><%= granny.name %></p>
+            <p><%= granny.city %></p>
+            <p><%= granny.description.capitalize %></p>
+        </div>
+        <hr>
+        <div class = "items price">
+            <p class="new"><%= granny.price %>€</p>
+        </div>
+        <div class="items cart">
+          <i class="fa-solid fa-cookie-bite"></i>
+          <span>MORE INFORMATION</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
