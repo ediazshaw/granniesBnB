@@ -1,0 +1,9 @@
+<%= simple_form_for (@granny) do |f| %>
+  <%= f.input :name, placeholder: 'Enter your name' %>
+  <%= f.input :city, placeholder: 'Enter your city' %>
+  <%= f.input :age, placeholder: 'Enter your age' %>
+  <%= f.input :price, placeholder: 'Enter your rate' %>
+  <%= f.input :description,placeholder: 'Enter a description of your skillset' %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Submit your application", class: "btn btn-flat" %>
+<% end %>
