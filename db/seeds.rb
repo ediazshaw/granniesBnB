@@ -24,7 +24,7 @@ puts "done"
 
 Granny.destroy_all
 
-cities = ["Madrid", "Lisboa", "Hamburg", "Bogota"]
+cities = ["Madrid", "Barcelona", "Toledo", "Salamanca"]
 puts 'Creating 4 fake grannies per city...'
 urls = ["https://images.unsplash.com/photo-1593100126453-19b562a800c1?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1467",
   "https://images.unsplash.com/photo-1442458370899-ae20e367c5d8?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774",
