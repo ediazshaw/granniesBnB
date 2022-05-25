@@ -63,7 +63,7 @@
   padding-bottom: 50px;
 }
 
-.btn{
+.banner .btn{
   // position: absolute;
   // left: 247px;
   // top: 428px;
@@ -72,14 +72,14 @@
   padding: 6px 12px;
 }
 
-.btn-flat {
+.banner .btn-flat {
   color: white;
   border-radius: 4px;
   background: #D25D59;
   transition: background 0.3s ease;
 }
 
-.btn-flat:hover {
+.banner .btn-flat:hover {
   background: #C4A5A0;
   color: white;
 }
