@@ -12,7 +12,7 @@
         <h2><%= "#{@granny.name} is looking forward to meet you:" %></h2>
       </div>
       <div class="description">
-        <p><%#= @granny.description %>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+        <p class="font-smaller"><%#= @granny.description %>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
   scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
       </div>
       <div class="abilities">
@@ -27,16 +27,16 @@
           <div class="first-row-frame">
             <div class="start-div">
               <p class="font-bigger"><strong>Start</strong></p>
-              <p><%= "20/7/2022" %></p>
+              <p><%= "20/7/2022", class: "font-smaller" %></p>
             </div>
             <div class="end-div">
               <p class="font-bigger"><strong>End</strong></p>
-              <p><%= "1/8/2022" %></p>
+              <p><%= "1/8/2022", class: "font-smaller" %></p>
             </div>
           </div>
           <div class="second-row-frame">
-            <p class="font-bigger"><strong>Select number of grandsons:</strong></p>
-            <p><%= "3 grandsons" %></p>
+            <p class="font-bigger"><strong>Select number of grandchildren:</strong></p>
+            <p><%= "3 grandchildren", class: "font-smaller" %></p>
           </div>
         </div>
         <div class="book-button">
@@ -49,9 +49,4 @@
       </div>
     </div>
   </div>
-
-
-
-
-
 </div>
