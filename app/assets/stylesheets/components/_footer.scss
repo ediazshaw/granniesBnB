@@ -10,20 +10,24 @@
   top: 1655px;
   width: 100%;
 }
+
 .flexbox {
   display: flex;
   align-items: center;
 }
+
 .flexbox a {
   color: #FFFFFF;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
 }
+
 .flexbox a:hover {
   opacity: 1;
   color: #D25D59;
 }
+
 .footer-copyright {
   font-family: 'Oleo Script';
   font-style: normal;
@@ -31,7 +35,6 @@
   font-size: 24px;
   line-height: 41px;
 }
-
 
 .page-container {
   display:grid;

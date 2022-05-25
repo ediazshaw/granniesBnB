@@ -5,9 +5,9 @@ $bg: #FEF5DF;
   background-color: #C4A5A0;
   font-family: 'Oleo Script';
   margin-bottom: 55px;
-  margin-left: 265px;
-  margin-right: 265px;
-  margin-top: 45px;
+  margin-top: 15px;
+  box-shadow: 3px 3px 3px grey;
+  border-radius: 3px;
 }
 
 body {
@@ -84,14 +84,14 @@ body {
 }
 
 .info {
-  font-size: 12px;
+  font-size: 22px;
   opacity: 0;
   letter-spacing: 1px;
   font-family: 'Lato', sans-serif;
   transform: translateY(40px);
   transition: all 0.7s;
   i {
-    font-size: 16px;
+    font-size: 25px;
   }
   span {
     margin-left: 10px;
