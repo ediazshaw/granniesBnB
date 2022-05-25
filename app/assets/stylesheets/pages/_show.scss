@@ -16,9 +16,6 @@
   margin: auto;
   border-radius: 8px;
 }
-h3 {
-  font-size: 35px;
-}
 .general-info {
   display: flex;
   justify-content: space-between;
@@ -33,9 +30,14 @@ h3 {
 }
 .description {
   padding-top: 15px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 .abilities {
   padding-top: 15px;
+  h3 {
+    font-size: 25px;
+  }
 }
 // Frame configuration
 .frame-info {
@@ -45,6 +47,9 @@ h3 {
   padding: 15px;
   margin-bottom: 50px;
   width: 400px;
+    h3 {
+    font-size: 35px;
+  }
 }
 .inside-frame {
   border-radius: 8px;
@@ -92,6 +97,7 @@ h3 {
   justify-content: space-between;
   span {
     font-size: 18px;
+    margin-top: 15px;
   }
 }
 .font-bigger {
