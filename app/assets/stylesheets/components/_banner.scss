@@ -1,21 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
 
 .banner{
-  background-image: url("flower.jpg");
+  // background-image: linear-gradient(to bottom, rgba(169, 169, 169, 0.8), rgba(169, 169, 169, 0.8)), url("flower.jpg");
   background-size: cover;
+  background-image: url("pattern2.png");
   background-repeat: no-repeat;
   color: white;
   background-position: center;
   display: flex;
-  justify-content: center;
+  justify-content:space-between;
+  align-items: center;
   position: relative;
   width: 100%;
   height: 450px;
-  opacity: 0.15;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.banner-container{
+  // position:absolute;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 120px;
 }
 
 .banner-img img{
-  position: absolute;
+  // position: absolute;
   width: 344px;
   height: 366px;
   left: 815px;
@@ -23,37 +34,39 @@
 }
 
 .title-banner{
-  position: absolute;
-  left: 100px;
-  top: 188px;
-  left: 100px;
-  top: 198px;
+  // position: absolute;
+  // left: 100px;
+  // top: 188px;
+  // left: 100px;
+  // top: 198px;
   font-family: 'Oleo Script';
   font-style: normal;
   font-weight: 400;
   font-size: 80px;
   line-height: 173px;
   color: #212529;
+  line-height: 60px;
 }
 
 .subtitle-banner{
-  position: absolute;
-  width: 536px;
-  height: 97px;
-  left: 150px;
-  top: 338px;
+  // position: absolute;
+  // width: 536px;
+  // height: 97px;
+  // left: 150px;
+  // top: 338px;
   font-family: 'Oleo Script';
   font-style: normal;
   font-weight: 400;
   font-size: 34px;
   line-height: 69px;
   color: #212529;
+  padding-bottom: 50px;
 }
 
 .btn{
-  position: absolute;
-  left: 247px;
-  top: 428px;
+  // position: absolute;
+  // left: 247px;
+  // top: 428px;
   font-family: 'Oleo Script';
   font-size: 24px;
   padding: 6px 12px;
