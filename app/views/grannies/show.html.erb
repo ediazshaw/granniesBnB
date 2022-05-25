@@ -3,8 +3,7 @@
     <span><%= @granny.name %></span>
     <span><%= @granny.city %></span>
   </div>
-  <div>
-    <%= image_tag "granny.png", class: "profile-img" %>
+  <div class="profile-img" style='background-image: url("<%= cl_image_path @granny.photo.key %>")'>
   </div>
   <div class="row">
     <div class="col-8">

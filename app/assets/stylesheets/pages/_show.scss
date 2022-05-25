@@ -15,6 +15,9 @@
   object-fit: cover;
   margin: auto;
   border-radius: 8px;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
 }
 .general-info {
   display: flex;
