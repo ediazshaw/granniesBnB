@@ -46,7 +46,7 @@ cities.each do |city|
 
   3.times do
     granny = Granny.new(
-      name: Faker::Name.name,
+      name: Faker::Name.female_first_name,
       age: rand(60..80),
       city: city,
       user: User.all.sample,
