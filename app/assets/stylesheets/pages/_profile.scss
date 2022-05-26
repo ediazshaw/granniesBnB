@@ -1,0 +1,10 @@
+.container-profile{
+  margin-left: 170px;
+  margin-right: 170px;
+}
+
+.cards-profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}

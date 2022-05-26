@@ -5,50 +5,38 @@
   </div>
   <div class="profile-img" style='background-image: url("<%= cl_image_path @granny.photo.key %>")'>
   </div>
-  <div class="row">
-    <div class="col-8">
-      <div class="initial-phrase">
-        <h2><strong><%= "#{@granny.name} is looking forward to meet you:" %></strong></h2>
-      </div>
-      <div class="description">
-        <p class="font-smaller"><%#= @granny.description %>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-      </div>
-      <div class="abilities">
+  <div class="container-show-info d-flex">
+    <div class="row">
+      <div class="col-10">
+        <div class="initial-phrase">
+          <h2><strong><%= "#{@granny.name} is looking forward to meet you:" %></strong></h2>
+        </div>
+        <div class="description">
+          <p class="font-smaller"><%#= @granny.description %>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+    scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+        </div>
+        <div class="abilities">
         <h2><strong>Best abilities:</strong></h2>
         <% @granny.abilities.each do |ability| %>
         <h3><%= ability.name %></h3>
         <% end %>
-        <h3></h3>
       </div>
+        <div class="more-info abilities">
+          <h4><strong>Contact her grandchild</strong>:</h4><h5><%= @granny.user.email %></h6>
+        </div>
     </div>
-    <div class="col-4">
-      <div class="frame-info">
-        <h3><strong><%= "#{@granny.price} €/day" %></strong></h3>
-        <div class="inside-frame">
-          <div class="first-row-frame">
-            <div class="start-div">
-              <p class="font-bigger"><strong>Start</strong></p>
-              <p class="font-smaller"><%= "20/7/2022"%></p>
-            </div>
-            <div class="end-div">
-              <p class="font-bigger"><strong>End</strong></p>
-              <p class="font-smaller"><%= "1/8/2022" %></p>
-            </div>
-          </div>
-          <div class="second-row-frame">
-            <p class="font-bigger"><strong>Select number of grandchildren:</strong></p>
-            <p class="font-smaller"><%= "3 grandchildren" %></p>
-          </div>
-        </div>
-        <div class="book-button">
-          <%= link_to "Book your granny", "#" %>
-        </div>
-        <div class="math">
-          <span><%= "#{@granny.price}€ x 10 days" %></span>
-          <span><%= "Total: X€" %></span>
-        </div>
+  </div>
+    <div class="container-calendars frame-info">
+    <div class="form-wrapper" style="width: 400px; margin: 0 auto;" data-controller="flatpickr">
+      <h3><strong><%= "#{@granny.price} €/day" %></strong></h3>
+      <%= simple_form_for [ @granny, @booking] do |f| %>
+      <div class="d-flex dates">
+        <%= f.input :initial_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :final_date, as: :string, required: false, input_html: {class: "datepicker"} %>
       </div>
-    </div>
+        <%= f.input :num_grandsons, as: :integer, :label => "Number of Granchildren" %>
+        <%= f.button :submit, "Book your Granny", class: "book-button" %>
+      <% end %>
+      </div>
   </div>
 </div>

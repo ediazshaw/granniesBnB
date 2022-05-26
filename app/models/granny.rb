@@ -1,6 +1,7 @@
 class Granny < ApplicationRecord
   include PgSearch::Model
   belongs_to :user
+  has_many :bookings, dependent: :destroy
   has_many :granny_abilities, dependent: :destroy
   has_many :abilities, through: :granny_abilities
 

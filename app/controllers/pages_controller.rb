@@ -11,4 +11,9 @@ class PagesController < ApplicationController
       }
     end
   end
+
+  def profile
+    @bookings = Booking.all
+    @grannies = Granny.all
+  end
 end
