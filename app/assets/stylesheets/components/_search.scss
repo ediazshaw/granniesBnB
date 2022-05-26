@@ -1,0 +1,51 @@
+.form-control {
+  padding: 0.85rem 0.75rem;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.search-btn {
+  font-family: 'Oleo Script';
+  font-size: 32px;
+  color: white;
+  background: #C4A5A0;
+  border: #C4A5A0 solid 1px;
+  transition: background 0.3s ease;
+  &:hover {
+    background: #C4A5A0;
+    color: white;
+  }
+}
+.container-abilities {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.ability {
+  margin: 5px;
+}
+.btn-ability {
+  font-family: 'Oleo Script';
+  font-size: 20px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: #C4A5A0;
+  background: #FFFFFF;
+  border: #C4A5A0 solid 1px;
+  text-decoration: none;
+  &:hover {
+    background: #C4A5A0;
+    color: white;
+  }
+}
+.container h2 {
+  font-family: 'Oleo Script';
+  font-size: 25px;
+  color: #C4A5A0;
+}

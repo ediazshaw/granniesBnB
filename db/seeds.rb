@@ -10,6 +10,7 @@ require "open-uri"
 
 
 User.destroy_all
+Ability.destroy_all
 puts 'Creating 10 fake users...'
 
 10.times do
@@ -41,8 +42,18 @@ urls = ["https://images.unsplash.com/photo-1593100126453-19b562a800c1?crop=entro
 "https://images.unsplash.com/photo-1555929248-160aae345052?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387",
 "https://images.unsplash.com/photo-1533128361669-69c065857a13?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436"]
 
+a = ["Pull you by the ear", "Telling repeated stories", "Make you a cocido when you are sick", "Forces you to eat more", "Cooking", "Crochet"]
+  a.each do |ability|
+    abs = Ability.new(
+      name: ability,
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    )
+    abs.save
+    puts abs.name
+  end
 
 cities.each do |city|
+
 
   3.times do
     granny = Granny.new(
@@ -54,10 +65,19 @@ cities.each do |city|
       description: Faker::Hobby.activity
     )
     granny.save!
+    2.times do
+      granny_ability = GrannyAbility.new(
+        granny: granny,
+        ability: Ability.all.sample
+      )
+      granny_ability.save
+      puts "granny_ability done"
+    end
     file = URI.open(urls[n])
     n += 1
     granny.photo.attach(io: file, filename: "#{granny.name}.png", content_type: 'image/png')
     puts granny.name
+    puts "creating abilities"
   end
 end
 puts "done"
