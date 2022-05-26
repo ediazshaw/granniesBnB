@@ -9,6 +9,8 @@ class GranniesController < ApplicationController
       else
         @grannies = Granny.city_search(params[:query])
       end
+    elsif params[:ability].present?
+      @grannies = Ability.find_by(name: params[:ability]).grannies
     else
       @grannies = Granny.all
     end
