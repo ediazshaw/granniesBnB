@@ -1,2 +1,4 @@
-<h2><%= granny.name %></h2>
-<p><%= granny.city %></p>
+<div class="profile-img" style='background-image: url("<%= cl_image_path granny.photo.key %>")'>
+  </div>
+<h3 class='btn-popup-map'><%= link_to granny.name, granny_path(granny) %></h3>
+<h3><%= granny.description %></h3>

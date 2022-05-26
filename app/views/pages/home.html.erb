@@ -6,7 +6,20 @@
   <div class="subtitle-banner">
     Everybody needs a Granny
   </div>
-    <%= link_to "Find Yours", grannies_path , class: "btn btn-flat" %>
+  <div class="search-form">
+    <div class="search-bar">
+      <%= form_tag grannies_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a granny"
+        %>
+    </div>
+    <div class="search-btn-div">
+        <%= submit_tag "Search", class: "search-btn" %>
+    </div>
+      <% end %>
+  </div>
 </div>
   <div class="banner-img">
   <%= image_tag "logo_granny.png" %>

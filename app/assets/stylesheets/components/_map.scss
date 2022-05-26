@@ -4,5 +4,24 @@
 
 .mapboxgl-popup-content {
   text-align: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Oleo Script", sans-serif;
+  a {
+    text-decoration: none;
+    color: #ffffff
+  }
+  h3 {
+    color:#CAA49F
+  }
+  .profile-img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.mapboxgl-ctrl-geocoder {
+  max-width: none;
+  width: 100%;
+  border: 1px solid lightgrey;
+  box-shadow: none;
 }

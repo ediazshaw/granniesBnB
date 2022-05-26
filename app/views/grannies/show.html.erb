@@ -16,9 +16,11 @@
     scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
         </div>
         <div class="abilities">
-          <h2><strong>Best abilities:</strong></h2>
-          <h3><%= @granny.description %></h3>
-        </div>
+        <h2><strong>Best abilities:</strong></h2>
+        <% @granny.abilities.each do |ability| %>
+        <h3><%= ability.name %></h3>
+        <% end %>
+      </div>
         <div class="more-info abilities">
           <h4><strong>Contact her grandchild</strong>:</h4><h5><%= @granny.user.email %></h6>
         </div>
