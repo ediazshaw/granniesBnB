@@ -1,0 +1,29 @@
+.btn-rounded-edge {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: 'Oleo Script';
+  color: #ffffff;
+  font-size: 24px;
+  background: #D25D59;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-rounded-edge:hover {
+  background: #CAA49F;
+  text-decoration: none;
+}
+
+.btn-popup-map {
+  border-radius: 5px;
+  font-family: 'Oleo Script';
+  color: #ffffff;
+  font-size: 21px;
+  background: #D25D59;
+  padding: 3px 5px 3px 5px;
+  text-decoration: none;
+  border: none;
+  margin-top: 3px;
+}
