@@ -1,6 +1,6 @@
 class Granny < ApplicationRecord
   belongs_to :user
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
 
   validates :name, presence: true
   validates :age, presence: true, numericality: { only_interger: true }

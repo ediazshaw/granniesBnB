@@ -1,8 +1,16 @@
-<h1>My Bookings</h1>
-<% @bookings.each do |booking| %>
-Name: <% granny = Granny.find(booking.granny_id) %> <%= "#{granny.name}" %> <br>
-Contact: <% user = User.find(granny.user_id) %> <%= "#{user.email}" %><br>
-Number of grandchildren: <%= booking.num_grandsons %> <br>
-Start: <%= booking.initial_date %> <br>
-End: <%= booking.final_date %> <br>
-<% end %>
+<div class="container-profile">
+  <div class="general-info"><h1>My Bookings</h1></div>
+  <div class="booking-cards cards-profile">
+    <% @bookings.each do |booking| %>
+      <div class="frame-info">
+        Name: <% granny = Granny.find(booking.granny_id) %> <%= "#{granny.name}" %> <br>
+        Contact: <% user = User.find(granny.user_id) %> <%= "#{user.email}" %><br>
+        Number of grandchildren: <%= booking.num_grandsons %> <br>
+        Start: <%= booking.initial_date %> <br>
+        End: <%= booking.final_date %> <br>
+        Duration: <%= (booking.final_date - booking.initial_date).to_i %> <br>
+        Price: <%= (booking.final_date - booking.initial_date).to_i * granny.price %>
+      </div>
+    <% end %>
+  </div>
+</div>

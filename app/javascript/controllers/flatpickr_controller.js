@@ -4,6 +4,8 @@ import flatpickr from "flatpickr";
 export default class extends Controller {
 
   connect() {
-    flatpickr(".datepicker", {});
+    flatpickr(".datepicker", {
+      minDate: "today"
+  });
   }
 }
