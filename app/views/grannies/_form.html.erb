@@ -1,9 +1,11 @@
 <%= simple_form_for (@granny) do |f| %>
   <%= f.input :name, placeholder: 'Enter your name' %>
-  <%= f.input :city, placeholder: 'Enter your city' %>
+  <%= f.input :city, label: 'Address',
+            input_html: { data: { geocoder_target: "city" }, class: "d-none" },
+            wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
   <%= f.input :age, placeholder: 'Enter your age' %>
   <%= f.input :price, placeholder: 'Enter your rate' %>
-  <%= f.input :description,placeholder: 'Enter a description of your skillset' %>
+  <%= f.input :description, placeholder: 'Enter a description of your skillset' %>
   <%= f.input :photo, as: :file %>
-  <%= f.submit "Submit your application", class: "btn btn-flat" %>
+  <%= f.submit "Submit Your Application", class: "btn-rounded-edge" %>
 <% end %>
