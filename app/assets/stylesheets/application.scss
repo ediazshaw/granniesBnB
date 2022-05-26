@@ -9,6 +9,8 @@
 @import "font-awesome";
 @import "mapbox-gl/dist/mapbox-gl";
 @import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
+@import "flatpickr/dist/flatpickr";
+
 
 // Your CSS partials
 @import "components/index";
@@ -16,7 +18,6 @@
 @import "components/banner";
 @import "components/footer";
 @import "pages/show";
-
 body {
   background-color: #FFFFFF;
 }

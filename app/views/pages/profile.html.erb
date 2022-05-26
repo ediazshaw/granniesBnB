@@ -1,0 +1,8 @@
+<h1>My Bookings</h1>
+<% @bookings.each do |booking| %>
+Name: <% granny = Granny.find(booking.granny_id) %> <%= "#{granny.name}" %> <br>
+Contact: <% user = User.find(granny.user_id) %> <%= "#{user.email}" %><br>
+Number of grandchildren: <%= booking.num_grandsons %> <br>
+Start: <%= booking.initial_date %> <br>
+End: <%= booking.final_date %> <br>
+<% end %>
