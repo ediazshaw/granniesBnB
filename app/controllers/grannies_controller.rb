@@ -1,6 +1,17 @@
 class GranniesController < ApplicationController
   def index
-    @grannies = Granny.all
+    @abilities = Ability.all
+    if params[:query].present?
+      @city = params[:query]
+      @grannies = Granny.city_search(params[:query])
+      if params[:ability].present?
+        @grannies = Ability.find_by(name: params[:ability]).grannies.city_search(params[:query])
+      else
+        @grannies = Granny.city_search(params[:query])
+      end
+    else
+      @grannies = Granny.all
+    end
   end
 
   def show
