@@ -21,6 +21,16 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
-.navbar-nav .nav-link {
+.navbar-nav {
+  align-items: center;
+  .nav-link {
   font-size: 20px;
+  }
+}
+
+.navbar-height-fit {
+  height: fit-content;
+  color: rgba(88, 83, 83, 0.55);
+  font-size: 16px;
+  margin-right: 15px;
 }
