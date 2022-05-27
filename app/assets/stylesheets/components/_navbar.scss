@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
 
 .container-fluid{
-  justify-content: left;
+  justify-content: left !important;
 }
 
 .navbar-lewagon {
@@ -27,6 +27,7 @@
 }
 .navbar-nav {
   align-items: center;
+  padding: 5px;
   .nav-link {
   font-size: 22px;
   }
@@ -51,4 +52,8 @@
     color: white;
     border-radius: 3px;
   }
+}
+
+.navbar{
+  justify-content: left;
 }
