@@ -1,36 +1,32 @@
 <div class="banner d-flex">
-<div class="banner-container d-flex">
-  <div class="title-banner">
-    Grannies B&B
-  </div>
-  <div class="subtitle-banner">
-    Everybody needs a Granny
-  </div>
-  <div class="search-form">
-    <div class="search-bar">
-      <%= form_tag grannies_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find a granny"
-        %>
+  <div class="banner-container d-flex">
+    <div class="title-banner">
+      Grannies B&B
     </div>
-    <div class="search-btn-div">
-        <%= submit_tag "Search", class: "search-btn" %>
+    <div class="subtitle-banner">
+      Everybody needs a Granny
     </div>
+    <div class="dropdown">
+      <button class="cities-filter-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Cities <i class="fa-solid fa-caret-down"></i>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <% Granny.all.pluck(:city).uniq.each do |city| %>
+        <li><%= link_to city, grannies_path(query: city), class: "dropdown-item" %></li>
       <% end %>
+      </ul>
+    </div>
   </div>
-</div>
   <div class="banner-img">
-  <%= image_tag "logo_granny.png" %>
+    <%= image_tag "logo_granny.png" %>
   </div>
 </div>
 
 <div class="container">
   <h1 class="grannies-title text-center">Map of the best Grannies</h1>
-
   <div style="width: 100%; height: 400px;"
     data-controller="mapbox"
     data-mapbox-markers-value="<%= @markers.to_json %>"
-    data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>

@@ -9,7 +9,7 @@
         %>
     </div>
     <div class="search-btn-div">
-      <%= submit_tag "Search", class: "search-btn" %>
+      <%= submit_tag "City", class: "search-btn" %>
     </div>
     <% end %>
   </div>
@@ -34,7 +34,9 @@
             <div class = "items head">
               <p><%= granny.name %></p>
               <p><%= granny.city %></p>
-              <p><%= granny.description.capitalize %></p>
+              <% granny.abilities.each do |ability|%>
+                <p><%= ability.name %></p>
+              <% end %>
             </div>
             <hr>
             <div class = "items price">
