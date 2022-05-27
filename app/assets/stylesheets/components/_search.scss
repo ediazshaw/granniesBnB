@@ -5,20 +5,21 @@
 .search-form {
   display: flex;
   flex-direction: row-reverse;
-  margin-bottom: 25px;
   margin-top: 25px;
 }
 
 .search-btn {
   font-family: 'Oleo Script';
   font-size: 32px;
-  color: white;
-  background: #C4A5A0;
-  border: #C4A5A0 solid 1px;
+  background: #D25D59;
+  color: #FFFFFF;
+  border: #D25D59 solid 1px;
   transition: background 0.3s ease;
+  padding: 1px 25px;
+  border-radius: 5px 0px 0px 5px;
   &:hover {
-    background: #C4A5A0;
-    color: white;
+    background: #FFFFFF;
+    color: #D25D59;
   }
 }
 .container-abilities {
@@ -48,4 +49,18 @@
   font-family: 'Oleo Script';
   font-size: 25px;
   color: #C4A5A0;
+}
+
+.cities-filter-btn {
+  background: #D25D59;
+  color: #FFFFFF;
+  font-family: 'Oleo Script';
+  font-size: 32px;
+  border: #D25D59 solid 1px;
+  border-radius: 5px;
+  padding: 1px 20px;
+  &:hover {
+    background: #FFFFFF;
+    color: #D25D59;
+  }
 }

@@ -92,6 +92,11 @@
     text-decoration: none;
     color: #FFFFFF;
   }
+  &:hover {
+    background: #FFFFFF;
+    color: #D25D59;
+    border: #D25D59 solid 1px;
+  }
 }
 
 .first-row-frame {
@@ -140,5 +145,5 @@
 }
 
 .dates{
-  
+
 }
