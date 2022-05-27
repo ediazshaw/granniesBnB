@@ -53,6 +53,11 @@ body {
   padding-left: 20px;
   padding-top: 15px;
   letter-spacing: 3px;
+  color: white;
+  a {
+    text-decoration: none;
+    color: #F4EAD1;
+  }
 }
 
 .head {
@@ -124,4 +129,8 @@ body {
     transition-delay: 0.6s;
     opacity: 1;
   }
+}
+
+.click-card{
+  text-decoration: none;
 }
