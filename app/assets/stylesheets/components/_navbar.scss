@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
 
+.container-fluid{
+  justify-content: left;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -24,7 +28,7 @@
 .navbar-nav {
   align-items: center;
   .nav-link {
-  font-size: 20px;
+  font-size: 22px;
   }
 }
 
@@ -33,4 +37,18 @@
   color: rgba(88, 83, 83, 0.55);
   font-size: 16px;
   margin-right: 15px;
+}
+
+.space-bar{
+  // justify-content: space-between;
+}
+
+.new-granny-btn{
+  font-size: 22px;
+  color: rgba(88, 83, 83, 0.55);
+  &:hover {
+    background: #C4A5A0;
+    color: white;
+    border-radius: 3px;
+  }
 }

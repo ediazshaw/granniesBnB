@@ -26,6 +26,8 @@
   </nav>
   <div class="cards">
     <% @grannies.each do |granny| %>
+            <div class="click-card">
+              <%= link_to granny_path(granny) do %>
       <div class="card" style='background-image: url("<%= cl_image_path granny.photo.key %>")'>
         <div class="overlay">
           <div class = "items">
@@ -39,9 +41,9 @@
               <p><%= granny.price %>€</p>
             </div>
             <div class="items info">
-              <%= link_to granny_path(granny) do %>
                 <i class="fa-solid fa-cookie-bite"></i>
                 <span>MORE INFORMATION</span>
+            </div>
               <% end %>
             </div>
           </div>
