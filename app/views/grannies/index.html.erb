@@ -32,7 +32,9 @@
             <div class = "items head">
               <p><%= granny.name %></p>
               <p><%= granny.city %></p>
-              <p><%= granny.description.capitalize %></p>
+              <% granny.abilities.each do |ability|%>
+                <p><%= ability.name %></p>
+              <% end %>
             </div>
             <hr>
             <div class = "items price">
