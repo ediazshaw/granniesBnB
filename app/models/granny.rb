@@ -7,8 +7,7 @@ class Granny < ApplicationRecord
   has_one_attached :photo
 
   validates :name, presence: true
-  validates :age, presence: true, numericality: { only_interger: true }
-  validates :photo, presence: true
+  validates :age, presence: true, numericality: { only_integer: true }
   validates :description, length: { maximum: 1000, too_long: `%{count} characters is the maximum allowed` }
 
   geocoded_by :city
