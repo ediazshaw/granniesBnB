@@ -1,16 +1,44 @@
-<div class="container-profile">
-  <div class="general-info"><h1>My Bookings</h1></div>
-  <div class="booking-cards cards-profile">
-    <% @bookings.each do |booking| %>
-      <div class="frame-info">
-        Name: <% granny = Granny.find(booking.granny_id) %> <%= "#{granny.name}" %> <br>
-        Contact: <% user = User.find(granny.user_id) %> <%= "#{user.email}" %><br>
-        Number of grandchildren: <%= booking.num_grandsons %> <br>
-        Start: <%= booking.initial_date %> <br>
-        End: <%= booking.final_date %> <br>
-        Duration: <%= (booking.final_date - booking.initial_date).to_i %> <br>
-        Price: <%= (booking.final_date - booking.initial_date).to_i * granny.price %>
-      </div>
-    <% end %>
+  <% total_price = 0 %>
+  <% total_days = 0 %>
+<div class="container-profile d-flex">
+  <div class="general-info-profile d-flex">
+    <h3>My Bookings</h3>
+    <div class="booking-cards cards-profile">
+      <% @bookings.each do |booking| %>
+        <div class="frame-info-profile d-flex">
+          <div class="photo-text-card d-flex">
+            <% granny = Granny.find(booking.granny_id) %>
+            <div class="avatar-profile-card" style='background-image: url("<%= cl_image_path granny.photo.key %>")'>
+            </div>
+            <div class="middle-info d-flex">
+            <strong><%= "#{granny.name}" %></strong>
+            <div><%= booking.initial_date %> - <%= booking.final_date %></div>
+            <div>Number of grandchildren: <%= booking.num_grandsons %></div>
+            <div>Contact: <% user = User.find(granny.user_id) %> <%= "#{user.email}" %></div>
+            </div>
+          </div>
+           <div class="price-div d-flex">
+           <div>
+          <% price = (booking.final_date - booking.initial_date).to_i * granny.price %> <%= price %>€ <br>
+           </div>
+          <% duration = (booking.final_date - booking.initial_date).to_i %> <%= duration %> days
+          </div>
+        </div>
+
+        <% total_days += duration  %>
+        <% total_price += price %>
+      <% end %>
+    </div>
+  </div>
+  <div class="profile-info frame-info-profile d-flex">
+  <div class="profile-info-top d-flex">
+    <h5><%= current_user.email %></h5>
+    <div class="avatar-profile">
+      <%= image_tag "orla.jpg" %>
+    </div>
+  </div>
+    Grannies Booked: <br><%= @bookings.count %> <br>
+    Happy Granny days: <br><%= total_days %> days<br>
+    Total amount invested: <br><%= total_price %>€
   </div>
 </div>
