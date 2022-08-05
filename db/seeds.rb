@@ -39,7 +39,7 @@ puts "Creating good seeds"
 granny = Granny.new(
   name: "Eduarda",
   age: rand(80..90),
-  city: "Toledo",
+  city: "Toledo, España",
   user: User.all.sample,
   price: rand(80..300),
   description: "This granny is really patience and intelligence. At my age I have just graduated from a technical university specialized in engineering. I like doing shots in 100 montaditos."
@@ -56,7 +56,7 @@ puts granny.name
 granny = Granny.new(
   name: "Marta",
   age: rand(80..90),
-  city: "Rio do Janeiro",
+  city: "Rio do Janeiro, Brasil",
   user: User.all.sample,
   price: rand(80..300),
   description: "This granny likes guaraná and surfing in the beaches of Rio. I used to swear in portuguese but don't be worried because I'm really nice and I will always help you in whatever you need."
@@ -73,7 +73,7 @@ puts granny.name
 granny = Granny.new(
   name: "Joana",
   age: rand(80..90),
-  city: "Madrid",
+  city: "Madrid, España",
   user: User.all.sample,
   price: rand(80..300),
   description: "This granny would like to eat just patatas bravas all the time. I also like to complaint about everything. I have a great sense of humour and I also like whiskey."
@@ -89,7 +89,7 @@ granny.photo.attach(io: file, filename: "#{granny.name}.png", content_type: 'ima
 puts granny.name
 puts "granny_ability done"
 n = 0
-cities = ["Madrid", "Barcelona", "Toledo", "Salamanca"]
+cities = ["Madrid, España", "Barcelona, España", "Toledo, España", "Salamanca, España"]
 puts 'Creating 4 fake grannies per city...'
 urls = ["https://images.unsplash.com/photo-1593100126453-19b562a800c1?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1467",
   "https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871",

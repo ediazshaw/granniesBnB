@@ -28,10 +28,12 @@ class GranniesController < ApplicationController
   def create
     @granny = Granny.new(granny_params)
     @granny.user = current_user
-    @abilities = Ability.where(id: params[:granny][:ability_ids])
-    @abilities.each do |ability|
-      ability_check_box = GrannyAbility.new(granny: @granny, ability: ability)
-      ability_check_box.save
+    if @granny.valid?
+      @abilities = Ability.where(id: params[:granny][:ability_ids])
+      @abilities.each do |ability|
+        ability_check_box = GrannyAbility.new(granny: @granny, ability: ability)
+        ability_check_box.save
+      end
     end
     if @granny.save
       redirect_to granny_path(@granny)
